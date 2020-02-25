@@ -9,3 +9,5 @@ myapp == 0.1dev
 
 # myapp/views.py: 1,2
 requests == 2.18.4
+
+whitenoise == 5.0.1
