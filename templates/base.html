@@ -1,0 +1,35 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>web scrap</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+   <nav>
+    <div id="nav_bar" class="nav-wrapper">
+      <a href="#" class="brand-logo right"style="color:black">Logo</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="{% url 'home' %}" style="color:black"><b>home</b></a></li>
+        <li><a href="{% url 'new_search' %}" style="color:black"><b>new search</b></a></li>
+      </ul>
+    </div>
+  </nav>
+
+	
+	{% block content %}
+	{% endblock %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+	<form action="{% url 'new_search' %}" method="post">
+		{% csrf_token %}
+		<label for="search_input">search</label>
+		
+		<input id="search_input" type="text" name="search">
+		  <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+	</form>
+	<h2 style="text-align: center">{{search | title}}</h2>
+		
+	<div class="row">
+		{% for post in final_post %}
+		<div class="col s12 m4">
+	      <div class="card">
+	        <div class="card-image">
+	          <img src="{{  post.2 }}">
+	          
+	        </div>
+	        <div class="card-content">
+	          <p>{{ post.0 }}</p>
+	        </div>
+	        <div class="card-action">
+	          <a href="{{ post.1 }}">This is a link</a>
+	        </div>
+	      </div>
+	    </div>
+	    {% endfor %}
+	</div>
+</div>
+{% endblock %}
