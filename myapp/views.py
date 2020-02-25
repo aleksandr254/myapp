@@ -39,7 +39,6 @@ def new_search(request):
     	if post.find(class_='result-image').get('data-ids'):
     		post_img_id = post.find(class_='result-image').get('data-ids').split(',')[0].split(':')[1]
     		post_img_url = BASSE_IMG_URL.format(post_img_id)
-    		print(post_img_url)
 
     	final_post.append((post_title, post_url, post_img_url))
 
